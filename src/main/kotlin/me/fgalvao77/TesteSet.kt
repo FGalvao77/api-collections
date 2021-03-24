@@ -24,4 +24,14 @@ fun main() {
     val funcionarios3 = setOf(fernando, katia, sara)
     val resultSubtract = funcionarios3.subtract(funcionarios2)
     resultSubtract.forEach { println(it) }
+
+    //realizando a subtração de um funcionário do set
+    //a função "sutract" retorna o que tem de comum nos sets
+    println("")
+    println("---------------------------------------")
+    println("Retorna o que tem em comum nos sets")
+    val resultIntersect = funcionarios3.intersect(funcionarios2)
+    resultIntersect.forEach { println(it) }
+
+
 }
