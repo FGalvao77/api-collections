@@ -14,7 +14,15 @@ fun main() {
     println("INFOS DO FUNCIONÁRIO:")
     println(funcionarios.find { it.nome == "Sara"})
 
+    println("")
+    println("--------------------") //ordenando a lista
+    println("Ordenação por salários:")
+    funcionarios
+        .sortedBy { it.salario }
+        .forEach { println(it) }
+
 }
+
 //criando um "data class" para "Funcionario"
 data class Funcionario(
     val nome: String,
