@@ -2,9 +2,9 @@ package me.fgalvao77
 
 fun main() {
     //instanciando três objetos
-    val fernando = Funcionario(nome = "Fernando", salario = 2785.0, dataNasc = "x3/xx/19xx")
-    val katia = Funcionario(nome = "Katia ", salario = 3754.0, dataNasc = "x1/xx/19xx")
-    val sara = Funcionario(nome = "Sara", salario = 3289.0, dataNasc = "x5/xx/20xx")
+    val fernando = Funcionario(nome = "Fernando", salario = 2785.0, dataNasc = "x3/xx/19xx", tipoContratacao = "CLT")
+    val katia = Funcionario(nome = "Katia ", salario = 3754.0, dataNasc = "x1/xx/19xx", tipoContratacao = "CLT")
+    val sara = Funcionario(nome = "Sara", salario = 3289.0, dataNasc = "x5/xx/20xx", tipoContratacao = "PJ")
 
     val funcionarios = listOf(fernando, katia, sara)
 
@@ -21,13 +21,20 @@ fun main() {
         .sortedBy { it.salario }
         .forEach { println(it) }
 
+    println("")
+    println("--------------------") //agrupando por tipo de contratação
+    println("Tipo de contratação:")
+    funcionarios
+        .groupBy { it.tipoContratacao }
+        .forEach { println(it) }
 }
 
 //criando um "data class" para "Funcionario"
 data class Funcionario(
     val nome: String,
     val salario: Double,
-    val dataNasc: String
+    val dataNasc: String,
+    val tipoContratacao: String
     ) {
 
     override fun toString(): String = //realizando interpolação
