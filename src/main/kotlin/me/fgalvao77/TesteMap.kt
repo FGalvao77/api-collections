@@ -6,9 +6,11 @@ fun main() {
     val map1 = mapOf(pair)
 
     //imprimindo o "map1"
-    map1.forEach { (k, v) -> println("Chave: $k | Valor: $v") }
+    map1.forEach { (k, v) -> println("Chave: $k | \tValor: $v") }
 
     println("--------------------------------------")
+    println("")
+
     //utilizando o recurso "infix"
     val map2 = mapOf(
         "Kátia" to 2385.0,
