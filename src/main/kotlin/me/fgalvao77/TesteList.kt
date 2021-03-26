@@ -2,9 +2,9 @@ package me.fgalvao77
 
 fun main() {
     //instanciando três objetos
-    val fernando = Funcionario(nome = "Fernando", salario = 2785.0, dataNasc = "x3/xx/19xx", tipoContratacao = "CLT")
-    val katia = Funcionario(nome = "Katia ", salario = 3754.0, dataNasc = "x1/xx/19xx", tipoContratacao = "CLT")
-    val sara = Funcionario(nome = "Sara", salario = 3289.0, dataNasc = "x5/xx/20xx", tipoContratacao = "PJ")
+    val fernando = Funcionario("Fernando", 2850.0, "x3/xx/19xx", "CLT")
+    val katia = Funcionario("Katia", 3754.0, "x1/xx/19xx", "CLT")
+    val sara = Funcionario("Sara", 3289.0,"x5/xx/20xx", "PJ")
 
     val funcionarios = listOf(fernando, katia, sara)
 

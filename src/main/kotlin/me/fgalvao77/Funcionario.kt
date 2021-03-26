@@ -10,10 +10,10 @@ data class Funcionario(
 
     override fun toString(): String = //realizando interpolação
         """
-            ---------------------
-            Nome   : $nome
-            Salario: $salario
+            ----------------------------------------
+            Nome              : $nome
+            Salario           : $salario
             Data de nascimento: $dataNasc
-            ---------------------
+            ----------------------------------------
         """.trimIndent()
 }
