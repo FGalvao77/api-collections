@@ -17,4 +17,15 @@ fun main() {
     println(repositorio.findById(sara.nome))
     println(repositorio.findById(katia.nome))
 
+    println("")
+    println("----------------------------------------")
+    println("---------- \tTodos elementos ------------")
+    repositorio.findAll().forEach { println(it) }
+
+    println("")
+    println("----------------------------------------")
+    println("-------- Removendo elemento(s) ---------")
+    repositorio.remove(katia.nome)
+    repositorio.findAll().forEach { println(it) }
+
 }
